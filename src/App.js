@@ -21,7 +21,6 @@ function Users() {
     .then(res => {
       return res.json()
     })
-    // update state with setUsers 
     .then(user => {setUsers(user.results)
     })
   }, [])
@@ -39,9 +38,9 @@ function Users() {
           index={index}
           isHidden= {isHidden}
           currentUser= {currentUser}
+          age={user.dob.age}
           email={user.email}
           phone={user.phone}
-          age={user.dob.age}
           handleClick={handleClick}
           />
         }
